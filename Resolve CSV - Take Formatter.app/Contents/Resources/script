@@ -1,4 +1,4 @@
-#!/Library/Frameworks/Python.framework/Versions/3.7/bin/python3
+#!/usr/local/bin/python3
 
 __programName__ = "Resolve-CSV-TakeFormatter"
 __description__ = "Takes a Resolve metadata CSV and converts take from default sound format to commonly used editorial format. Eg: A Cam take 01 becomes 1a"
