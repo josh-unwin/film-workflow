@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/Library/Frameworks/Python.framework/Versions/3.7/bin/python3
 
 __programName__ = "Resolve ALE Clip Renamer"
 __description__ = "Takes a list of Resolve ALE's, exports new versions with the Name column replaced with Scene-Take"
@@ -9,15 +9,11 @@ import csv
 import sys
 import os
 import argparse
-from datetime import datetime
-import operator
-from operator import itemgetter
 
 # Method for processing the ALEs.
 def ale_parser(inputAle):
     with open(inputAle, 'r') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter='\t')
-        currentTime = datetime.now().strftime('%Y%m%d_%H%M%S')
         outputFilePath = os.path.dirname(inputAle) + "/_" + os.path.basename(inputAle).split(".")[0] + '_scene-take.ale'
 
         with open(outputFilePath, 'w') as new_file:
